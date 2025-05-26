@@ -1,0 +1,130 @@
+body {
+    background-color: rgb(43, 43, 43);
+    font-family: "Poppins", sans-serif;
+    color: white;
+  }
+  
+  h1 {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  #favorites-list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 28px;
+    padding: 0 20px;
+    cursor: pointer;
+  }
+  
+  .show {
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s;
+    box-shadow: 10px 10px 10px rgb(70, 68, 68);
+  }
+  
+  .show:hover {
+    transform: scale(1.02);
+  }
+  
+  .show-img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .show-data {
+    position: relative;
+  }
+  
+  h2 {
+    text-align: center;
+    margin: 10px 0 5px;
+    font-size: 18px;
+  }
+  
+  .show-data p {
+    margin: 5px 0;
+  }
+  
+  .genres {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+   justify-content: center;
+  }
+  
+  .genre {
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #2b2b2b;
+    font-size: 14px;
+  }
+  
+  .links {
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .links a {
+    display: flex;
+    color: gold;
+    text-decoration: none;
+    font-size: 16px;
+    justify-content: center;
+    margin: 10px;
+  }
+  
+  .links a:hover {
+    text-decoration: underline;
+  }
+  
+  .rating {
+    position: absolute;
+    top: 10px;
+    right: 13px;
+    color: rgb(72, 88, 40);
+    font-size: 20px;
+  }
+  
+  .rating i {
+    color: yellow;
+  }
+
+  nav{
+    margin: 0px;
+  }
+  
+  nav a {
+    color: gold;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+  
+    margin: 10px;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  @media only screen and (max-width: 1200px) {
+    #favorites-list {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media only screen and (max-width: 768px) {
+    #favorites-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    #favorites-list {
+      grid-template-columns: 1fr;
+    }
+  }
